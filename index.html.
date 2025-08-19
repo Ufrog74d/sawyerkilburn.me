@@ -1,1 +1,11 @@
 <h1>Hello World My site works 🎉</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Site</title>
+</head>
+<body>
+  <h1>Hello, world! 🎉</h1>
+  <p>My custom domain works.</p>
+</body>
+</html>
