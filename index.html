@@ -4,74 +4,81 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sawyer Kilburn — Portfolio</title>
-  <meta name="description" content="Sawyer Kilburn — student developer portfolio and projects" />
+  <meta name="description" content="Sawyer Kilburn — Accounting major, CS minor, and aspiring finance professional" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0b0f;--card:#12121a;--muted:#9aa3b2;--text:#e8ecf1;--brand:#6ee7ff;--brand-2:#7c5cff;
-      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35)
+      --bg:#0d0f14;--card:#13161f;--muted:#8a95a8;--text:#e4e8f0;
+      --brand:#4f9ef8;--brand-2:#6b7fff;
+      --radius:14px;--shadow:0 8px 28px rgba(0,0,0,.32)
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(160deg,var(--bg),#0e1017 40%,#0b0b0f);color:var(--text)}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:800}
-    .logo-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 0 18px var(--brand)}
-    nav a{opacity:.85;margin-left:18px}
+    .wrap{max-width:1060px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 8px}
+    .logo{font-weight:800;font-size:17px;letter-spacing:-.3px}
+    nav a{opacity:.75;margin-left:22px;font-size:15px}
     nav a:hover{opacity:1}
 
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:60px 0}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero .intro{padding:36px}
-    h1{font-size:clamp(30px,4.5vw,54px);line-height:1.05;margin:0 0 12px}
-    .sub{color:var(--muted);font-size:clamp(14px,1.6vw,18px)}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-    .badge{padding:8px 12px;border-radius:999px;background:rgba(126, 136, 255, .12);border:1px solid rgba(126, 136, 255, .35);font-size:13px}
-    .cta{display:flex;gap:12px;margin-top:18px}
-    .btn{padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);backdrop-filter: blur(6px)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#001018;font-weight:700}
-    .btn:hover{transform:translateY(-1px)}
-    .avatar{aspect-ratio:1/1;min-height:280px;background:radial-gradient(80% 80% at 30% 20%,rgba(110,231,255,.35),rgba(124,92,255,.15) 45%, transparent 70%),url('https://picsum.photos/800?random=21') center/cover no-repeat;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:52px 0 36px}
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero .intro{padding:32px}
+    h1{font-size:clamp(28px,4vw,50px);line-height:1.08;margin:0 0 10px;font-weight:800}
+    .sub{color:var(--muted);font-size:clamp(14px,1.5vw,17px);margin:0 0 20px}
+    .badges{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 22px}
+    .badge{padding:6px 13px;border-radius:999px;background:rgba(79,158,248,.1);border:1px solid rgba(79,158,248,.28);font-size:13px;color:var(--text)}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:11px 18px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-size:14px;font-weight:500;transition:transform .15s,background .15s}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:600;border-color:transparent}
+    .btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.07)}
+    .btn.primary:hover{background:linear-gradient(135deg,#6ab3ff,#8090ff)}
+    .avatar{aspect-ratio:1/1;min-height:260px;background:radial-gradient(70% 70% at 35% 25%,rgba(79,158,248,.28),rgba(107,127,255,.12) 50%,transparent 75%);border-radius:var(--radius);border:1px solid rgba(255,255,255,.07)}
 
-    section{padding:28px 0}
-    .section-title{font-size:22px;margin:4px 0 16px;opacity:.9}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .proj{padding:18px}
-    .proj h3{margin:4px 0 8px}
-    .pill{font-size:12px;color:var(--muted)}
+    section{padding:24px 0}
+    .section-label{font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin:0 0 6px}
+    .section-title{font-size:22px;font-weight:700;margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .proj{padding:20px;display:flex;flex-direction:column;gap:6px;transition:transform .15s,border-color .15s}
+    .proj:hover{transform:translateY(-3px);border-color:rgba(79,158,248,.3)}
+    .proj-meta{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}
+    .proj-lang{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brand);flex-shrink:0}
+    .proj h3{margin:0;font-size:16px;font-weight:600}
+    .proj p{margin:0;font-size:14px;color:var(--muted);line-height:1.55}
 
-    .about{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-    .about .blurb{padding:22px;line-height:1.6}
+    .about{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:start}
+    .about .blurb{padding:24px}
+    .about .blurb p{margin:0 0 14px;font-size:15px;color:var(--muted)}
+    .about .blurb p:last-child{margin-bottom:0}
+    .skill-row{display:flex;flex-direction:column;gap:10px}
+    .skill-item strong{font-size:13px;font-weight:600;display:block;margin-bottom:3px}
+    .skill-item span{font-size:13px;color:var(--muted)}
 
-    .contact{display:flex;flex-wrap:wrap;gap:12px}
-    .contact a{display:inline-flex;align-items:center;gap:8px}
+    .contact{display:flex;flex-wrap:wrap;gap:10px}
+    footer{opacity:.55;text-align:center;padding:36px 0 24px;font-size:13px}
 
-    footer{opacity:.7;text-align:center;padding:34px 0}
-
-    @media (max-width:900px){
+    @media (max-width:880px){
       .hero{grid-template-columns:1fr}
       .grid{grid-template-columns:1fr 1fr}
       .about{grid-template-columns:1fr}
     }
-    @media (max-width:600px){
+    @media (max-width:580px){
       .grid{grid-template-columns:1fr}
-      .wrap{padding:18px}
+      .wrap{padding:16px}
     }
-
-    @media (prefers-color-scheme: light){
-      :root{--bg:#f7f8fb;--card:#ffffff;--text:#10131a;--muted:#5b6575}
-      .btn.primary{color:white}
+    @media (prefers-color-scheme:light){
+      :root{--bg:#f5f6fa;--card:#ffffff;--text:#111318;--muted:#555f70}
+      .btn.primary{color:#fff}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="logo"><span class="logo-dot"></span> Sawyer Kilburn</div>
+      <div class="logo">Sawyer Kilburn</div>
       <nav>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -81,74 +88,78 @@
 
     <section class="hero">
       <div class="intro card">
-        <h1>Building, learning, shipping.</h1>
-        <p class="sub">Student developer. Interested in CS, automation, and product. I like shipping small things fast and learning in public.</p>
+        <h1>Finance-minded.<br>Tech-enabled.</h1>
+        <p class="sub">First-year Accounting major with a CS minor. I build practical tools and pick up new skills fast.</p>
         <div class="badges">
-          <span class="badge">HTML/CSS/JS</span>
-          <span class="badge">Python</span>
-          <span class="badge">GitHub Pages</span>
-          <span class="badge">Notion • Figma</span>
+          <span class="badge">Accounting</span>
+          <span class="badge">Excel</span>
+          <span class="badge">Web Development</span>
+          <span class="badge">HTML / CSS / JS</span>
         </div>
         <div class="cta">
-          <a class="btn primary" href="#projects">See projects</a>
-          <a class="btn" href="mailto:sawyer.kilburn1@icloud.com">Email me</a>
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn" href="mailto:sawyer.kilburn1@icloud.com">Get in touch</a>
         </div>
       </div>
       <div class="avatar card" aria-label="Profile image placeholder"></div>
     </section>
 
     <section id="projects">
+      <div class="section-label">Work</div>
       <h2 class="section-title">Projects</h2>
       <div class="grid">
-        <a class="card proj" href="#" target="_blank" rel="noreferrer">
-          <div class="pill">Web • 2025</div>
-          <h3>Personal site</h3>
-          <p>A lightweight portfolio hosted on GitHub Pages with a custom domain.</p>
+        <a class="card proj" href="https://github.com/Ufrog74d/sawyerkilburn.me" target="_blank" rel="noreferrer">
+          <div class="proj-meta"><span class="proj-lang" style="background:#e34c26"></span> HTML / CSS / JS · 2025</div>
+          <h3>Personal Portfolio</h3>
+          <p>This site — designed and built from scratch, hosted on GitHub Pages with a custom domain.</p>
         </a>
-        <a class="card proj" href="#" target="_blank" rel="noreferrer">
-          <div class="pill">Automation</div>
-          <h3>Task Tracker</h3>
-          <p>Simple Python CLI to track daily habits and export stats.</p>
-        </a>
-        <a class="card proj" href="#" target="_blank" rel="noreferrer">
-          <div class="pill">Frontend</div>
-          <h3>Landing Page</h3>
-          <p>Responsive marketing page built with semantic HTML & vanilla JS.</p>
-        </a>
+        <div class="card proj" href="https://delancettsoninc.com" target="_blank" rel="noreferrer">
+          <div class="proj-meta"><span class="proj-lang" style="background:#e34c26"></span> HTML / CSS / JS · 2025</div>
+          <h3>Delancett Inc Website</h3>
+          <p>Professional business website built for a real client using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card proj">
+          <div class="proj-meta"><span class="proj-lang" style="background:#3572A5"></span> Python · 2025</div>
+          <h3>Construction Cost Calculator</h3>
+          <p>A tool for estimating and planning construction project costs, built to simplify budgeting and reduce manual work.</p>
+        </div>
       </div>
     </section>
 
     <section id="about" class="about">
       <div class="card blurb">
-        <h2 class="section-title">About</h2>
-        <p>I'm Sawyer, a student exploring computer science, automation, and product design. I enjoy making small useful tools and deploying them fast. Currently learning algorithms, web fundamentals, and shipping side projects.</p>
-        <p>Open to internships, freelance work, or collaborating on cool ideas.</p>
+        <div class="section-label">Background</div>
+        <h2 class="section-title">About Me</h2>
+        <p>I'm Sawyer, a first-year Accounting major with a minor in Computer Science. I'm drawn to the overlap between finance and technology — using code and data skills to solve real problems faster and more clearly.</p>
+        <p>I've already built websites for myself and a real client, and I'm actively growing my accounting knowledge alongside my technical skills. Open to internships and part-time opportunities where I can contribute and keep learning.</p>
       </div>
       <div class="card blurb">
-        <h2 class="section-title">Skills</h2>
-        <p><strong>Languages:</strong> JavaScript, Python, HTML, CSS</p>
-        <p><strong>Tools:</strong> Git/GitHub, Figma, Notion, VS Code</p>
-        <p><strong>Interests:</strong> automation, AI, finance, fitness</p>
+        <div class="section-label">Skills</div>
+        <h2 class="section-title">&nbsp;</h2>
+        <div class="skill-row">
+          <div class="skill-item"><strong>Spreadsheets</strong><span>Excel — budgeting, formulas, data organization (class &amp; personal use)</span></div>
+          <div class="skill-item"><strong>Web Development</strong><span>HTML, CSS, JavaScript — built multiple sites from scratch</span></div>
+          <div class="skill-item"><strong>Linux &amp; Networking</strong><span>Self-hosted home server, deployed personal VPN, comfortable on the command line</span></div>
+          <div class="skill-item"><strong>Tools</strong><span>Git / GitHub, VS Code, Google Workspace</span></div>
+          <div class="skill-item"><strong>Interests</strong><span>Personal finance, fintech, automation, building useful things</span></div>
+        </div>
       </div>
     </section>
 
     <section id="contact">
+      <div class="section-label">Say hello</div>
       <h2 class="section-title">Contact</h2>
       <div class="contact">
-        <a class="btn" href="mailto:sawyer.kilburn1@icloud.com">📧 Email</a>
-        <a class="btn" href="https://github.com/ufrog74d" target="_blank" rel="noreferrer">🐙 GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/sawyer-kilburn-01335b355/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
-        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">📄 Resume (PDF)</a>
+        <a class="btn" href="mailto:sawyer.kilburn1@icloud.com">Email</a>
+        <a class="btn" href="https://github.com/ufrog74d" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/sawyer-kilburn-01335b355/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn primary" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </div>
     </section>
 
-    <footer>
-      © <span id="y"></span> Sawyer Kilburn · Hosted on GitHub Pages
-    </footer>
+    <footer>© <span id="y"></span> Sawyer Kilburn · Hosted on GitHub Pages</footer>
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
